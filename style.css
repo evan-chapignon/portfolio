@@ -38,15 +38,19 @@ header {
 nav {
     max-width: 900px;
     margin: 0 auto 3rem auto;
+    display: flex; /* Make nav a flex container */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Vertically align items */
+    padding: 0 2rem; /* Add padding here so nav-links and toggle are within content flow */
 }
 
 .nav-links {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0; /* Reset margin */
     display: flex;
     gap: 2rem;
-    justify-content: flex-end;
+    /* justify-content: flex-end; -- No longer needed, handled by nav's justify-content */
 }
 
 .nav-links a {
@@ -159,7 +163,7 @@ h1 {
 }
 
 .project-card {
-    background: white;
+    background: var(--crust);
     border-radius: 0;
     overflow: hidden;
     border: 3px solid var(--text);
@@ -216,7 +220,7 @@ h1 {
 }
 
 .skill-category {
-    background: white;
+    background: var(--crust);
     padding: 1.5rem;
     border-radius: 0;
     border: 3px solid var(--text);
@@ -251,7 +255,7 @@ h1 {
 }
 
 .formation-item, .experience-item {
-    background: white;
+    background: var(--crust);
     padding: 2rem;
     border-radius: 0;
     border: 3px solid var(--text);
@@ -348,8 +352,24 @@ h1 {
         height: 180px;
     }
     h1 { font-size: 2rem; }
-    .nav-links { flex-wrap: wrap; }
     
+    nav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        gap: 1rem; /* Space between stacked items */
+        padding: 1rem 1rem; /* Adjust padding for small screens */
+    }
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap; /* Allow nav links to wrap */
+        font-size: 0.85rem;
+        gap: 1rem;
+    }
+    #theme-toggle {
+        margin: 0; /* Remove margin-left when stacked */
+        width: 48px; /* Revert to slightly larger size for better tap target */
+        height: 48px;
+    }
+
     .project-card, .formation-item, .experience-item, .skill-category {
         box-shadow: 4px 4px 0 var(--text); /* Smaller shadow on mobile */
     }
@@ -362,4 +382,65 @@ footer {
     font-size: 0.9rem; 
     font-family: 'JetBrains Mono', monospace;
     font-weight: 600;
+}
+
+/* --- Dark Mode (Catppuccin Mocha) --- */
+[data-theme="dark"] {
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: #11111b;
+    --text: #cdd6f4;
+    --subtext: #a6adc8;
+    --blue: #89b4fa;
+    --mauve: #cba6f7;
+    --sapphire: #74c7ec;
+    --green: #a6e3a1;
+    --surface0: #313244;
+    --red: #f38ba8;
+}
+
+/* Bouton Toggle */
+#theme-toggle {
+    position: static; /* No longer absolute */
+    width: 40px; /* Slightly smaller for inline flow */
+    height: 40px; /* Slightly smaller for inline flow */
+    background: var(--base);
+    border: 3px solid var(--text);
+    border-radius: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 0 var(--text);
+    transition: all 0.1s;
+    z-index: 1000;
+    color: var(--text);
+    margin-left: 2rem; /* Give some space from nav links */
+}
+
+#theme-toggle:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--blue);
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+#theme-toggle:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--text);
+}
+
+#theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+@media (max-width: 600px) {
+    #theme-toggle {
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+    }
 }
