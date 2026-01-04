@@ -109,7 +109,7 @@ h1 {
     font-size: 3rem; 
     font-weight: 900;
     letter-spacing: -1px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; Removed to allow mixed case */
 }
 
 .about-text {
@@ -123,12 +123,13 @@ h1 {
 
 .hero-subtitle {
     font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    font-weight: 900; /* Matched to H1 */
+    letter-spacing: -0.5px; /* Closer to H1 style */
     color: var(--blue);
-    text-transform: uppercase;
+    /* text-transform: uppercase; Removed */
     display: block;
     margin-bottom: 0.5rem;
+    font-size: 1.2rem; /* Adjusted size */
 }
 
 .container {
