@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Dev & Réseaux</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="accueil">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1 class="mono">./delepine_evan</h1>
+                <div class="about-text">
+                    <p><strong>Administration Système && Services Réseaux.</strong><br>
+                    Passionné par les systèmes UNIX et les
+                    architectures réseaux. Je suis capable d'installer
+                    des postes et de mettre en place des serveurs
+                    ainsi que de les gérer.</p>
+                    <p class="mono" style="font-size: 0.9rem; color: var(--blue);">📍 Lille | Disponible</p>
+                </div>
+            </div>
+            <img src="./photo_portfolio.jpg" alt="Ma Photo" class="profile-pic">
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <h2 id="experience" class="section-title">01. Expérience professionnelle</h2>
+        <div class="experience-list">
+			 <div class="experience-item">
+                <h3>Equipier polyvalent | Auchan Saint-Saulve</h3>
+                <p class="mono date">2025 - Présent</p>
+                <p>Accueil et conseil client, gestion des encaissements et support opérationnel au sein du magasin. Ce poste, occupé les week-ends en parallèle de mes études, sollicite ma polyvalence, mon sens du relationnel et ma rigueur.</p>
+             </div>
+			 <div class="experience-item">
+                <h3>Stage d'observation | RIS Saint-Saulve</h3>
+                <p class="mono date">Janvier 2020</p>
+                <p>Stage d'observation au sein d'une boutique d'informatique spécialisée en conseil, vente et réparation de matériel. Cette immersion m'a permis de découvrir le fonctionnement interne des ordinateurs (incluant le premier démontage d'un PC portable) et a été un catalyseur pour mon intérêt envers le domaine de l'informatique.</p>
+             </div>
+			 
+        </div>
+
+        <h2 id="formation" class="section-title">02. Formation</h2>
+        <div class="formation-list">
+            <div class="formation-item">
+                <h3>BUT Informatique <img src="./ulille.png" alt="Logo Université de Lille" style="height: 1em; vertical-align: middle; margin-left: 0.5em;"></h3>
+                <p class="mono date">2024 - Présent</p>
+                <p>IUT de Lille - Approfondissement en développement logiciel, systèmes et réseaux.</p>
+            </div>
+            <div class="formation-item">
+                <h3>Baccalauréat Général <img src="./wallon.jpg" alt="Logo Lycée Henri Wallon" style="height: 1em; vertical-align: middle; margin-left: 0.5em;"></h3>
+                <p class="mono date">2021 - 2024</p>
+                <p>Lycée Henri Wallon, Valenciennes - Spécialités NSI (Numérique et Sciences Informatiques) et Mathématiques.</p>
+            </div>
+        </div>
+
+        <h2 id="projets" class="section-title">03. Projets</h2>
+        
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-image" style="background-image: url('./dysparus.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="project-info">
+                    <h3>Labyrinthe des dys-parus</h3>
+                    <p>Développement d'un jeu de labyrinthe en Java respectant un cahier des charges strict. Gestion de projet avec Git et build automatisé via Maven.</p>
+                    <span class="tag">Java</span> <span class="tag">Git</span> <span class="tag">Maven</span>
+                    <a href="https://github.com/evan-chapignon/labyrinthe-des-dys-parus" class="cta-button" style="display: block; margin-top: 1rem; text-align: center;">Voir sur GitHub</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image"></div> <div class="project-info">
+                    <h3>Projet Réseau</h3>
+                    <p>Description courte du projet technique réalisé.</p>
+                    <span class="tag">Cisco</span> <span class="tag">VLAN</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image"><img src="./term.png" alt="Terminal Screenshot" style="width: 100%; height: 100%; object-fit: cover;"></div> <div class="project-info">
+                    <h3>Installation de poste</h3>
+                    <p>Maîtrise de l'installation et de la configuration de systèmes Linux. À l'aise dans cet environnement, j'utilise personnellement Gentoo Linux, ce qui témoigne d'une compréhension approfondie des systèmes d'exploitation et d'une capacité à gérer des configurations complexes.</p>
+                    <span class="tag">OpenRC</span> <span class="tag">SystemD</span> <span class="tag">Linux</span>
+                </div>
+            </article>
+        </div>
+
+        <h2 id="competences" class="section-title">04. Compétences</h2>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4 class="mono">Compétences Informatiques</h4>
+                <ul>
+                    <li><strong>Développement :</strong> Python, Bash,
+                    Java, C, SQL, LISP, HTML/CSS</li>
+                    <li><strong>Infrastructure :</strong> Linux (Debian/RedHat), Services Réseaux</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4 class="mono">Compétences Professionnelles</h4>
+                <ul>
+                    <li>Gestion de projet (Méthodes Agiles, Git/GitHub)</li>
+                    <li>Travail en équipe et communication</li>
+                    <li>Rédaction de documentation technique</li>
+                    <li>Analyse et résolution de problèmes</li>
+                    <li>Anglais technique</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 id="contact" class="section-title">05. Contact</h2>
+        <div class="contact-section">
+            <p>N'hésitez pas à me contacter pour discuter de projets ou d'opportunités.</p>
+            <a href="mailto:evan.delepine.etu@univ-lille.fr" class="cta-button">Me contacter</a>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/evan-delepine-68a915388/">LinkedIn</a>
+                <a href="https://github.com/evan-chapignon">GitHub</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="mono">
+        &copy; 2025 // delepine_evan
+    </footer>
+
+</body>
+</html>
