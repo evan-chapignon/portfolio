@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr" class="light"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evan Delepine — Portfolio BUT Informatique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="portfolio_files/css2.css" rel="stylesheet">
+
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- ── Status bar ── -->
+  <div class="statusbar">
+    <div class="statusbar-tag active">
+      <span>◆</span> portfolio
+    </div>
+    <div class="statusbar-tag">Evan Delepine — BUT Informatique · IUT de Lille</div>
+    <div class="statusbar-spacer"></div>
+    <div class="statusbar-right">
+      <div class="statusbar-info">html/css/js</div>
+      <div class="statusbar-info" id="clock">14:37</div>
+      <button class="theme-toggle" onclick="toggleTheme()" title="Changer de thème">
+        <span class="toggle-icon">◑</span><span id="theme-label">dark</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Sidebar ── -->
+  <nav class="sidebar">
+    <div class="sidebar-label">Navigation</div>
+    <a class="nav-item active" onclick="show('accueil')">
+      <span class="icon">~</span> Accueil
+    </a>
+    <a class="nav-item" onclick="show('profil')">
+      <span class="icon">$</span> Profil
+    </a>
+
+    <div class="sidebar-label">Projets</div>
+    <a class="nav-item" onclick="show('projets')">
+      <span class="icon">▸</span> Tous les projets
+    </a>
+    <a class="nav-item" onclick="show('projet-1')">
+      <span class="icon">·</span> Labyrinthe des dys-parus
+    </a>
+    <a class="nav-item" onclick="show('projet-2')">
+      <span class="icon">·</span> Serveur Matrix
+    </a>
+    <a class="nav-item" onclick="show('projet-3')">
+      <span class="icon">·</span> Blog technique
+    </a>
+    <a class="nav-item" onclick="show('projet-4')">
+      <span class="icon">·</span> Installation de poste
+    </a>
+
+    <div class="sidebar-label">Bilan</div>
+
+    <a class="nav-item" onclick="show('reflexion')">
+      <span class="icon">%</span> Analyse réflexive
+    </a>
+    <a class="nav-item" onclick="show('contact')">
+      <span class="icon">@</span> Contact
+    </a>
+  </nav>
+
+  <!-- ── Main ── -->
+  <main class="main">
+
+    <!-- ACCUEIL -->
+    <section class="section active" id="accueil">
+      <div style="padding-top: 40px;">
+        <div class="hero-name"><span class="slash">./</span>evan_delepine</div>
+        <div class="hero-sub">Étudiant BUT Informatique · IUT de Lille · Lille</div>
+
+        <div class="card" style="max-width: 560px;">
+          <div class="card-label">À propos de ce portfolio</div>
+          <p>Ce portfolio retrace mon parcours du Semestre 1 au Semestre
+ 4 en BUT Informatique. Il présente mes projets, les compétences 
+développées, et une analyse réflexive de mes apprentissages.</p>
+        </div>
+
+        <div class="grid-2" style="max-width: 560px; margin-top: 16px;">
+          <div class="card">
+            <div class="card-label">Parcours</div>
+            <p style="font-size:12px;color:var(--text-muted);">Parcours classique<br>Approfondissement <strong style="color:var(--text)">Administration Système &amp; Réseaux</strong></p>
+          </div>
+          <div class="card">
+            <div class="card-label">Orientation</div>
+            <p>Recherche d'une alternance en administration système et support utilisateur.</p>
+          </div>
+        </div>
+
+      </div>
+
+        <div class="prompt">
+          <span class="prompt-dollar">$</span>
+          <span>navigate --to profil &nbsp;<span style="animation: blink 1s step-end infinite; color: var(--accent);">█</span></span>
+        </div>
+    </section>
+
+    <!-- PROFIL -->
+    <section class="section" id="profil">
+      <div class="sec-header">
+        <h1>Profil</h1>
+        <span class="path">~/profil</span>
+      </div>
+
+      <div style="display:flex; gap:24px; align-items:flex-start; margin-bottom:16px;">
+        <div style="flex-shrink:0;">
+          <div style="width:120px; height:120px; border:1px solid var(--border); overflow:hidden; background:var(--bg-panel);">
+            <img src="portfolio_files/Evan.jpg" alt="Photo de profil" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--text-dim);font-size:10px;font-style:italic;\'>Evan.jpg</div>'">
+          </div>
+          <div style="font-size:9px; color:var(--text-dim); margin-top:6px; text-align:center; letter-spacing:0.05em;">Evan.jpg</div>
+        </div>
+        <div class="card" style="flex:1; margin-bottom:0;">
+          <div class="card-label">Présentation</div>
+          <p style="font-size:12px;color:var(--text-muted);">Passionné 
+par les systèmes UNIX et les architectures réseaux. À l'aise dans 
+l'administration système, je suis capable d'installer des postes et de 
+mettre en place des serveurs ainsi que de les gérer. J'utilise 
+personnellement Gentoo Linux, ce qui témoigne d'une compréhension 
+approfondie des systèmes d'exploitation.</p>
+          <p style="font-size:12px;color:var(--text-muted);margin-top:10px;">L'ergonomie
+ tient une place centrale dans ma façon de travailler : chaque outil, 
+chaque raccourci, chaque configuration est pensé pour réduire la 
+friction et maximiser le confort sur la durée. C'est ce qui me pousse 
+vers des environnements minimalistes et entièrement maîtrisés — du 
+gestionnaire de fenêtres au pipeline de publication.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-label">Centres d'intérêt professionnels</div>
+          <ul>
+            <li style="list-style:none; margin-bottom:4px; font-size:12px; color:var(--text-muted);"><span style="color:var(--text)">Systèmes UNIX / Linux</span></li>
+            <li style="list-style:none; margin-bottom:4px; font-size:12px; color:var(--text-muted);"><span style="color:var(--text)">Architectures réseaux</span></li>
+            <li style="list-style:none; margin-bottom:4px; font-size:12px; color:var(--text-muted);"><span style="color:var(--text)">Administration système</span></li>
+            <li style="list-style:none; font-size:12px; color:var(--text-muted);"><span style="color:var(--text)">Support utilisateur</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-label">Projet professionnel</div>
+          <p>Recherche d'un contrat d'alternance pour la troisième année du BUT, axé sur l'administration système Linux/UNIX et le support aux utilisateurs.</p>
+          <hr class="sep" style="margin:12px 0;">
+          <p>Poursuite d'études après le BUT ou insertion professionnelle directe selon les opportunités.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Formation</div>
+        <div style="margin-bottom:12px;">
+          <div class="project-field-label">2024 – présent</div>
+          <p style="font-size:12px;color:var(--text);">BUT Informatique — IUT de Lille</p>
+          <p style="font-size:11px;color:var(--text-muted);">Approfondissement en développement logiciel, systèmes et réseaux.</p>
+        </div>
+        <hr class="sep" style="margin:12px 0;">
+        <div>
+          <div class="project-field-label">2021 – 2024</div>
+          <p style="font-size:12px;color:var(--text);">Baccalauréat Général — Lycée Henri Wallon, Valenciennes</p>
+          <p style="font-size:11px;color:var(--text-muted);">Spécialités NSI (Numérique et Sciences Informatiques) et Mathématiques.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Technologies &amp; outils (aperçu)</div>
+        <div class="tags">
+          <span class="tag hard">Java</span>
+          <span class="tag hard">Shell / Bash</span>
+          <span class="tag hard">elisp</span>
+          <span class="tag hard">Linux</span>
+          <span class="tag">Git</span>
+          <span class="tag">Maven</span>
+          <span class="tag">SSH</span>
+          <span class="tag">Debian</span>
+          <span class="tag">Emacs</span>
+          <span class="tag">i3wm / Sway</span>
+          <span class="tag">Matrix</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS (vue liste) -->
+    <section class="section" id="projets">
+      <div class="sec-header">
+        <h1>Projets</h1>
+        <span class="path">~/projets</span>
+      </div>
+      <p style="font-size:11px; color:var(--text-dim); margin-bottom:24px;">Cliquez sur un projet pour en voir le détail, ou naviguez depuis le menu.</p>
+
+      <!-- Projet 1 -->
+      <div class="project-card" id="list-p1" onclick="show('projet-1')">
+        <div class="project-header">
+          <div class="project-index">01</div>
+          <div class="project-title-block">
+            <div class="project-title">Labyrinthe des dys-parus</div>
+            <div class="meta">
+              <span>S[X]</span>
+              <span>·</span>
+              <span>[SAÉ / Cours / Personnel]</span>
+              <span>·</span>
+              <span>[Individuel / Groupe]</span>
+            </div>
+            <div class="tags">
+              <span class="tag hard">[Tech]</span>
+              <span class="tag hard">[Tech]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 2 -->
+      <div class="project-card" id="list-p2" onclick="show('projet-2')">
+        <div class="project-header">
+          <div class="project-index">02</div>
+          <div class="project-title-block">
+            <div class="project-title">Mise en place d'un serveur Matrix</div>
+            <div class="meta">
+              <span>S[X]</span>
+              <span>·</span>
+              <span>[SAÉ / Cours / Personnel]</span>
+              <span>·</span>
+              <span>[Individuel / Groupe]</span>
+            </div>
+            <div class="tags">
+              <span class="tag hard">[Tech]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 3 -->
+      <div class="project-card" id="list-p3" onclick="show('projet-3')">
+        <div class="project-header">
+          <div class="project-index">03</div>
+          <div class="project-title-block">
+            <div class="project-title">Blog technique — blog.evand.dev</div>
+            <div class="meta">
+              <span>S[X]</span>
+              <span>·</span>
+              <span>[SAÉ / Cours / Personnel]</span>
+              <span>·</span>
+              <span>[Individuel / Groupe]</span>
+            </div>
+            <div class="tags">
+              <span class="tag hard">[Tech]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 4 -->
+      <div class="project-card" id="list-p4" onclick="show('projet-4')">
+        <div class="project-header">
+          <div class="project-index">04</div>
+          <div class="project-title-block">
+            <div class="project-title">Installation de poste (Gentoo)</div>
+            <div class="meta">
+              <span>S[X]</span>
+              <span>·</span>
+              <span>[SAÉ / Cours / Personnel]</span>
+              <span>·</span>
+              <span>[Individuel / Groupe]</span>
+            </div>
+            <div class="tags">
+              <span class="tag hard">[Tech]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJET 1 -->
+    <section class="section" id="projet-1">
+      <div class="sec-header">
+        <h1>Labyrinthe des dys-parus</h1>
+        <span class="path">~/projets/01</span>
+      </div>
+
+      <div class="project-grid">
+        <div>
+          <div class="project-field-label">Cadre</div>
+          <div class="project-field-value">SAÉ · Semestre 1</div>
+        </div>
+        <div>
+          <div class="project-field-label">Mode de travail</div>
+          <div class="project-field-value">Groupe de 2 personnes</div>
+        </div>
+        <div>
+          <div class="project-field-label">Période</div>
+          <div class="project-field-value">Novembre 2024</div>
+        </div>
+        <div>
+          <div class="project-field-label">Technologies</div>
+          <div class="tags">
+            <span class="tag hard">Java</span>
+            <span class="tag hard">JavaFX</span>
+            <span class="tag hard">Git</span>
+            <span class="tag">Maven</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Contexte &amp; objectifs</div>
+        <p style="font-size:12px;color:var(--text-muted);">Développement en Java d'un jeu de labyrinthe dans le cadre d'une SAÉ. L'objectif était de concevoir un moteur de génération procédurale paramétrable (avec des labyrinthes parfaits/imparfaits et des algorithmes comme le parcours en profondeur DFS), tout en proposant une interface graphique JavaFX moderne et trois modes de jeu (progression, coopératif, libre).</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Votre rôle personnel</div>
+        <p>J'ai pris en charge la conception de l'architecture logicielle globale du jeu (via les design patterns Observateur et Factory pour l'organisation MVC), l'implémentation des algorithmes de génération de labyrinthes, ainsi qu'une partie de l'interface utilisateur en JavaFX.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Résultats obtenus</div>
+        <p>Un livrable entièrement fonctionnel intégrant les modes solo et coopératif, accompagné de diagrammes de classes et de cas d'utilisation UML complets. Le moteur supporte la personnalisation de la densité et de la taille du labyrinthe avec des transitions fluides.</p>
+      </div>
+
+      <div class="illustration-box">
+        [ Capture d'écran du jeu · Schéma de l'architecture · <a href="https://github.com/evan-chapignon/labyrinthe-des-dys-parus" style="color:var(--accent);">github.com/evan-chapignon/labyrinthe-des-dys-parus</a> ]
+      </div>
+
+      <hr class="sep">
+
+      <div class="card">
+        <div class="card-label">Compétences développées</div>
+        <div style="margin-bottom: 8px;">
+          <div class="project-field-label">Hard skills</div>
+          <div class="tags">
+            <span class="tag hard">Programmation orientée objet (Java)</span>
+            <span class="tag hard">Conception d'interfaces (JavaFX)</span>
+            <span class="tag hard">Algorithmique &amp; Design Patterns</span>
+            <span class="tag hard">Gestion de version (Git)</span>
+            <span class="tag">Build Maven &amp; UML</span>
+          </div>
+        </div>
+        <div>
+          <div class="project-field-label" style="margin-top:12px;">Soft skills</div>
+          <div class="tags">
+            <span class="tag soft">Travail d'équipe (découpage des tâches et intégration via Git)</span>
+            <span class="tag soft">Rigueur (maintien d'une architecture MVC propre)</span>
+            <span class="tag soft">Résolution de problèmes (débogage de cas limites réseau/coopératif)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Analyse réflexive</div>
+        <div class="reflection">Ce projet m'a permis d'appliquer concrètement des patterns POO à un projet de taille moyenne, plutôt que de les aborder uniquement de façon théorique en cours.</div>
+        <p style="margin-top:8px;">La gestion de la synchronisation des actions en mode coopératif a posé de réelles difficultés d'implémentation. Le choix de restructurer le code autour du pattern Observateur a permis de découpler proprement la vue et de débloquer la situation.</p>
+        <p style="margin-top:8px;">Si c'était à refaire, j'écrirais les tests unitaires beaucoup plus tôt et je figerais l'API du modèle avant de développer les différents modes de jeu, afin de limiter les refontes de code en cours de route.</p>
+      </div>
+    </section>
+
+    <!-- PROJET 2 -->
+    <section class="section" id="projet-2">
+      <div class="sec-header">
+        <h1>Mise en place d'un serveur Matrix</h1>
+        <span class="path">~/projets/02</span>
+      </div>
+      <div class="project-grid">
+        <div>
+          <div class="project-field-label">Cadre</div>
+          <div class="project-field-value">SAÉ · Semestre 3</div>
+        </div>
+        <div>
+          <div class="project-field-label">Mode de travail</div>
+          <div class="project-field-value">Groupe de 3 — Delepine-Gengembre, Facon, Hamida</div>
+        </div>
+        <div>
+          <div class="project-field-label">Période</div>
+          <div class="project-field-value placeholder">[Mois 2025 – Mois 2025]</div>
+        </div>
+        <div>
+          <div class="project-field-label">Technologies</div>
+          <div class="tags">
+            <span class="tag hard">Debian</span>
+            <span class="tag hard">Matrix / Synapse</span>
+            <span class="tag hard">SSH</span>
+            <span class="tag hard">Shell</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">Contexte &amp; objectifs</div>
+        <p style="font-size:12px;color:var(--text-muted);">Déploiement 
+et configuration d'un serveur de messagerie Matrix sur un système 
+Debian. L'objectif était de mettre en place une infrastructure de 
+communication auto-hébergée, incluant la gestion des accès via SSH et 
+l'automatisation de tâches par scripts shell.</p>
+      </div>
+      <div class="card"><div class="card-label">Votre rôle personnel</div><div class="placeholder">Quelles parties de l'infrastructure avez-vous configurées ? Avez-vous rédigé des scripts spécifiques ?</div></div>
+      <div class="card"><div class="card-label">Résultats obtenus</div><div class="placeholder">Le serveur est-il fonctionnel ? Quelles fonctionnalités ont été livrées ?</div></div>
+      <div class="illustration-box">[ Captures d'écran Element · Schéma réseau · <a href="https://gitlab.univ-lille.fr/etu/2025-2026/s303/i-delepine-gengembre-facon-hamida" style="color:var(--accent);">GitLab IUT</a> ]</div>
+      <hr class="sep">
+      <div class="card">
+        <div class="card-label">Compétences développées</div>
+        <div style="margin-bottom:8px;">
+          <div class="project-field-label">Hard skills</div>
+          <div class="tags">
+            <span class="tag hard">Administration système Debian</span>
+            <span class="tag hard">Configuration SSH</span>
+            <span class="tag hard">Scripting Shell</span>
+            <span class="tag hard">Déploiement serveur</span>
+          </div>
+        </div>
+        <div>
+          <div class="project-field-label" style="margin-top:12px;">Soft skills</div>
+          <div class="tags">
+            <span class="tag soft">Travail en équipe</span>
+            <span class="tag soft placeholder">Autre soft skill illustré</span>
+          </div>
+        </div>
+      </div>
+      <div class="card"><div class="card-label">Analyse réflexive</div><div class="placeholder">Ce que vous avez appris, les difficultés rencontrées, ce que vous feriez différemment.</div></div>
+    </section>
+
+    <!-- PROJET 3 -->
+    <section class="section" id="projet-3">
+      <div class="sec-header">
+        <h1>Blog technique</h1>
+        <span class="path">~/projets/03</span>
+      </div>
+      <div class="project-grid">
+        <div><div class="project-field-label">Cadre</div><div class="project-field-value">Projet personnel</div></div>
+        <div><div class="project-field-label">Mode de travail</div><div class="project-field-value">Individuel</div></div>
+        <div><div class="project-field-label">Période</div><div class="project-field-value">Avril 2026 – en cours</div></div>
+        <div><div class="project-field-label">Technologies</div><div class="tags">
+          <span class="tag hard">Emacs / org-mode</span>
+          <span class="tag hard">org-publish</span>
+          <span class="tag hard">HTML / CSS</span>
+          <span class="tag">GitHub Pages</span>
+          <span class="tag">yasnippet</span>
+        </div></div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Contexte &amp; objectifs</div>
+        <p style="font-size:12px;color:var(--text-muted);">Blog technique personnel accessible sur <a href="https://blog.evand.dev/" style="color:var(--accent);">blog.evand.dev</a>,
+ créé pour documenter des projets et partager un workflow. Rédigé 
+entièrement en org-mode depuis Emacs, converti automatiquement en HTML 
+via <code style="font-size:10px;background:var(--bg);padding:2px 5px;border:1px solid var(--border);">org-publish</code>, et déployé sur GitHub Pages sous nom de domaine personnel.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Votre rôle personnel</div>
+        <p style="font-size:12px;color:var(--text-muted);">Conception et
+ développement intégral : écriture du CSS from scratch (typographie, 
+thème clair minimaliste, palette pastel), mise en place du pipeline 
+org-publish, configuration du déploiement GitHub Pages, et 
+automatisation des fichiers via yasnippet dans Emacs.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Résultats obtenus</div>
+        <p style="font-size:12px;color:var(--text-muted);">Site en ligne
+ avec 3 articles publiés : conception du CSS, découverte de LaTeX, et le
+ meta-post sur l'infrastructure du blog. Pipeline de publication 
+fonctionnel : écrire en org-mode → <code style="font-size:10px;background:var(--bg);padding:2px 5px;border:1px solid var(--border);">org-publish</code> → push git → déployé en 2–3 minutes.</p>
+      </div>
+
+      <div class="illustration-box" style="border-style: solid; height: 320px; overflow: hidden; padding: 0;">
+        <a href="https://blog.evand.dev/" target="_blank" style="display: block; width: 100%; height: 100%;">
+          <img src="portfolio_files/blog.png" alt="Capture d'écran du blog" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+        </a>
+      </div>
+
+      <hr class="sep">
+
+      <div class="card">
+        <div class="card-label">Compétences développées</div>
+        <div style="margin-bottom:8px;">
+          <div class="project-field-label">Hard skills</div>
+          <div class="tags">
+            <span class="tag hard">Emacs / org-mode avancé</span>
+            <span class="tag hard">CSS from scratch</span>
+            <span class="tag hard">Déploiement GitHub Pages</span>
+            <span class="tag hard">Automatisation (yasnippet, org-publish)</span>
+          </div>
+        </div>
+        <div>
+          <div class="project-field-label" style="margin-top:12px;">Soft skills</div>
+          <div class="tags">
+            <span class="tag soft">Autonomie</span>
+            <span class="tag soft">Documentation &amp; communication écrite</span>
+            <span class="tag soft">Rigueur dans la publication</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Analyse réflexive</div>
+        <div class="reflection">Ce projet illustre une approche où 
+l'outil de travail (Emacs) devient aussi l'outil de publication — une 
+cohérence de workflow rare à ce stade.</div>
+        <div class="placeholder" style="margin-top:8px;">Qu'avez-vous 
+appris sur vous-même en décidant de créer votre CSS plutôt que 
+d'utiliser un thème existant ? Qu'est-ce que cela dit de votre rapport à
+ l'outil ?</div>
+        <div class="placeholder" style="margin-top:8px;">Qu'est-ce que vous feriez évoluer dans le blog (contenu, technique, fréquence de publication) ?</div>
+      </div>
+    </section>
+
+    <!-- PROJET 4 -->
+    <section class="section" id="projet-4">
+      <div class="sec-header">
+        <h1>Installation de poste (Gentoo)</h1>
+        <span class="path">~/projets/04</span>
+      </div>
+      <div class="project-grid">
+        <div><div class="project-field-label">Cadre</div><div class="project-field-value">Projet personnel &amp; SAÉ</div></div>
+        <div><div class="project-field-label">Mode de travail</div><div class="project-field-value">Individuel</div></div>
+        <div><div class="project-field-label">Période</div><div class="project-field-value placeholder">[En cours / depuis XXXX]</div></div>
+        <div><div class="project-field-label">Technologies</div><div class="tags">
+          <span class="tag hard">Gentoo Linux</span>
+          <span class="tag hard">OpenRC</span>
+          <span class="tag hard">SystemD</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Suckless</span>
+        </div></div>
+      </div>
+      <div class="card">
+        <div class="card-label">Contexte &amp; objectifs</div>
+        <p style="font-size:12px;color:var(--text-muted);">Maîtrise de 
+l'installation et de la configuration de systèmes Linux, depuis les 
+distributions grand public jusqu'à Gentoo — une distribution 
+source-based qui demande de compiler l'intégralité du système. Ce projet
+ reflète une compréhension approfondie des mécanismes internes d'un OS.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Votre rôle personnel</div>
+        <p style="font-size:12px;color:var(--text-muted);">Installation 
+complète de Gentoo en environnement personnel : partitionnement, 
+compilation du noyau, configuration d'OpenRC, sélection des USE flags, 
+mise en place d'un environnement graphique minimal (outils Suckless).</p>
+      </div>
+      <div class="card"><div class="card-label">Résultats obtenus</div><div class="placeholder">Le système est-il utilisé au quotidien ? Qu'avez-vous appris de la compilation du noyau ou de la gestion des USE flags ?</div></div>
+      <div class="illustration-box">[ Capture du terminal / environnement · <a href="https://github.com/evan-chapignon/suckless" style="color:var(--accent);">github.com/evan-chapignon/suckless</a> ]</div>
+      <hr class="sep">
+      <div class="card">
+        <div class="card-label">Compétences développées</div>
+        <div style="margin-bottom:8px;">
+          <div class="project-field-label">Hard skills</div>
+          <div class="tags">
+            <span class="tag hard">Administration système Linux</span>
+            <span class="tag hard">Compilation noyau</span>
+            <span class="tag hard">OpenRC / SystemD</span>
+            <span class="tag hard">Gestion de paquets source</span>
+          </div>
+        </div>
+        <div>
+          <div class="project-field-label" style="margin-top:12px;">Soft skills</div>
+          <div class="tags">
+            <span class="tag soft">Autonomie</span>
+            <span class="tag soft">Résolution de problèmes</span>
+            <span class="tag soft">Persévérance</span>
+          </div>
+        </div>
+      </div>
+      <div class="card"><div class="card-label">Analyse réflexive</div><div class="placeholder">Qu'est-
+ce que l'expérience Gentoo vous a apporté par rapport à d'autres 
+distributions ? Qu'avez-vous compris sur Linux que vous ne saviez pas 
+avant ?</div></div>
+    </section>
+
+
+
+    <!-- RÉFLEXION GLOBALE -->
+    <section class="section" id="reflexion">
+      <div class="sec-header">
+        <h1>Analyse réflexive</h1>
+        <span class="path">~/reflexion</span>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Évolution S1 → S4</div>
+        <p>En arrivant en BUT Informatique, je me 
+suis dit qu'enfin, je pourrais satisfaire mon rêve de lycéen d'être 
+développeur. Seulement, la vie réserve bien des surprises, et il s'est 
+avéré que les cours de réseau du deuxième semestre m'ont donné avant 
+tout l'envie d'exercer dans le domaine du réseau</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Ce que ces deux ans m'ont appris</div>
+        <div class="reflection">Vous pouvez noter ici une citation, une leçon ou une prise de conscience clé.</div>
+        <div class="placeholder">Développez en 5 à 10 lignes ce que le 
+BUT vous a apporté au-delà des cours : autonomie, travail en équipe, 
+rigueur, découverte d'un domaine de prédilection…</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-label">Points forts identifiés</div>
+          <ul>
+            <li style="margin-bottom:6px;">Bonne maîtrise des environnements UNIX (notamment Gentoo et Debian) et de l'administration système.</li>
+            <li style="margin-bottom:6px;">Recherche constante d'ergonomie et d'efficacité dans mes outils (automatisation avec Emacs, org-mode).</li>
+            <li>Habitude de documenter proprement mes projets et mes configurations sur mon blog technique.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-label">Axes de progression</div>
+          <ul>
+            <li style="margin-bottom:6px;">Savoir limiter le temps que je passe à configurer mes outils pour rester concentré sur l'essentiel d'un projet.</li>
+            <li style="margin-bottom:6px;">M'adapter plus facilement aux outils standards imposés en groupe ou en entreprise.</li>
+            <li>Préciser mes recherches de stage/alternance et mon projet d'études pour la suite du BUT.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Perspectives</div>
+        <div class="placeholder">Où souhaitez-vous aller après le BUT ? Quelles compétences voulez-vous continuer à développer ?</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="sec-header">
+        <h1>Contact</h1>
+        <span class="path">~/contact</span>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Me contacter</div>
+        <br>
+        <div class="skill-row">
+          <span class="skill-name" style="color:var(--text-dim);">Email</span>
+          <a href="mailto:evan.delepine.etu@univ-lille.fr" style="font-size:12px; color:var(--accent); text-decoration:none;">evan.delepine.etu@univ-lille.fr</a>
+        </div>
+        <div class="skill-row" style="margin-top:8px;">
+          <span class="skill-name" style="color:var(--text-dim);">GitHub</span>
+          <a href="https://github.com/evan-chapignon" style="font-size:12px; color:var(--accent); text-decoration:none;">github.com/evan-chapignon</a>
+        </div>
+        <div class="skill-row" style="margin-top:8px;">
+          <span class="skill-name" style="color:var(--text-dim);">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/evan-delepine-68a915388/" style="font-size:12px; color:var(--accent); text-decoration:none;">linkedin.com/in/evan-delepine</a>
+        </div>
+        <div class="skill-row" style="margin-top:8px;">
+          <span class="skill-name" style="color:var(--text-dim);">Localisation</span>
+          <span style="font-size:12px; color:var(--text-muted);">Lille, France</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Disponibilités</div>
+        <p>Recherche d'une alternance pour l'année universitaire 2026-2027 (BUT 3) en métropole lilloise.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer bar ── -->
+  <div class="footerbar">
+    <span>Evan Delepine — BUT Informatique · IUT de Lille</span>
+    <span style="flex:1"></span>
+    <a href="#" onclick="show('accueil')">~/</a>
+    <a href="#" onclick="show('contact')">@contact</a>
+    <span style="color:var(--border-active)">·</span>
+    <span id="year">2026</span>
+  </div>
+
+</div>
+
+<script>
+  // Clock
+  function updateClock() {
+    const now = new Date();
+    document.getElementById('clock').textContent =
+      now.getHours().toString().padStart(2,'0') + ':' +
+      now.getMinutes().toString().padStart(2,'0');
+  }
+  updateClock();
+  setInterval(updateClock, 10000);
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Theme toggle
+  function toggleTheme() {
+    const isLight = document.documentElement.classList.toggle('light');
+    document.getElementById('theme-label').textContent = isLight ? 'dark' : 'light';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  }
+  if (localStorage.getItem('theme') === 'light') {
+    document.documentElement.classList.add('light');
+    document.getElementById('theme-label').textContent = 'dark';
+  }
+
+  // Navigation
+  function show(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+
+    const target = document.getElementById(id);
+    if (target) target.classList.add('active');
+
+    document.querySelectorAll('.nav-item').forEach(n => {
+      if (n.getAttribute('onclick') && n.getAttribute('onclick').includes(id)) {
+        n.classList.add('active');
+      }
+    });
+
+    window.scrollTo(0, 0);
+  }
+</script>
+
+
+
+</body></html>
