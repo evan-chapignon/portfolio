@@ -48,13 +48,13 @@
       <span class="icon">·</span> Serveur Matrix
     </a>
     <a class="nav-item" onclick="show('projet-3')">
-      <span class="icon">·</span> Blog technique
+      <span class="icon">·</span> Script Dolibarr
     </a>
     <a class="nav-item" onclick="show('projet-4')">
-      <span class="icon">·</span> Installation de poste
+      <span class="icon">·</span> Blog technique
     </a>
     <a class="nav-item" onclick="show('projet-5')">
-      <span class="icon">·</span> Script Dolibarr
+      <span class="icon">·</span> Installation de poste
     </a>
 
     <div class="sidebar-label">Bilan</div>
@@ -217,6 +217,29 @@ gestionnaire de fenêtres au pipeline de publication.</p>
         <div class="project-header">
           <div class="project-index">03</div>
           <div class="project-title-block">
+            <div class="project-title">Script de déploiement Dolibarr</div>
+            <div class="meta">
+              <span>S3</span>
+              <span>·</span>
+              <span>SAÉ 3.03 (Système)</span>
+              <span>·</span>
+              <span>Groupe de 2 personnes</span>
+            </div>
+            <div class="tags">
+              <span class="tag hard">Shell / Bash</span>
+              <span class="tag hard">Podman</span>
+              <span class="tag hard">Traefik</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 4 -->
+      <div class="project-card" id="list-p4" onclick="show('projet-4')">
+        <div class="project-header">
+          <div class="project-index">04</div>
+          <div class="project-title-block">
             <div class="project-title">Blog technique — blog.evand.dev</div>
             <div class="meta">
               <span>S4</span>
@@ -234,10 +257,10 @@ gestionnaire de fenêtres au pipeline de publication.</p>
         </div>
       </div>
 
-      <!-- Projet 4 -->
-      <div class="project-card" id="list-p4" onclick="show('projet-4')">
+      <!-- Projet 5 -->
+      <div class="project-card" id="list-p5" onclick="show('projet-5')">
         <div class="project-header">
-          <div class="project-index">04</div>
+          <div class="project-index">05</div>
           <div class="project-title-block">
             <div class="project-title">Installation de poste (Gentoo)</div>
             <div class="meta">
@@ -251,29 +274,6 @@ gestionnaire de fenêtres au pipeline de publication.</p>
               <span class="tag hard">Gentoo Linux</span>
               <span class="tag hard">Suckless (dwm/st)</span>
               <span class="tag">OpenRC / Bash</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projet 5 -->
-      <div class="project-card" id="list-p5" onclick="show('projet-5')">
-        <div class="project-header">
-          <div class="project-index">05</div>
-          <div class="project-title-block">
-            <div class="project-title">Script de déploiement Dolibarr</div>
-            <div class="meta">
-              <span>S3</span>
-              <span>·</span>
-              <span>SAÉ 3.03 (Système)</span>
-              <span>·</span>
-              <span>Groupe de 2 personnes</span>
-            </div>
-            <div class="tags">
-              <span class="tag hard">Shell / Bash</span>
-              <span class="tag hard">Podman</span>
-              <span class="tag hard">Traefik</span>
-              <span class="tag">PostgreSQL</span>
             </div>
           </div>
         </div>
@@ -457,168 +457,8 @@ gestionnaire de fenêtres au pipeline de publication.</p>
     <!-- PROJET 3 -->
     <section class="section" id="projet-3">
       <div class="sec-header">
-        <h1>Blog technique</h1>
-        <span class="path">~/projets/03</span>
-      </div>
-      <div class="project-grid">
-        <div><div class="project-field-label">Cadre</div><div class="project-field-value">Projet personnel</div></div>
-        <div><div class="project-field-label">Mode de travail</div><div class="project-field-value">Individuel</div></div>
-        <div><div class="project-field-label">Période</div><div class="project-field-value">Avril 2026 – en cours</div></div>
-        <div><div class="project-field-label">Technologies</div><div class="tags">
-          <span class="tag hard">Emacs / org-mode</span>
-          <span class="tag hard">org-publish</span>
-          <span class="tag hard">HTML / CSS</span>
-          <span class="tag">GitHub Pages</span>
-          <span class="tag">yasnippet</span>
-        </div></div>
-      </div>
-
-      <div class="card">
-        <div class="card-label">Contexte &amp; objectifs</div>
-        <p style="font-size:12px;color:var(--text-muted);">Blog technique personnel accessible sur <a href="https://blog.evand.dev/" style="color:var(--accent);">blog.evand.dev</a>,
- créé pour documenter des projets et partager un workflow. Rédigé 
-entièrement en org-mode depuis Emacs, converti automatiquement en HTML 
-via <code style="font-size:10px;background:var(--bg);padding:2px 5px;border:1px solid var(--border);">org-publish</code>, et déployé sur GitHub Pages sous nom de domaine personnel.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-label">Votre rôle personnel</div>
-        <p style="font-size:12px;color:var(--text-muted);">Conception et
- développement intégral : écriture du CSS from scratch (typographie, 
-thème clair minimaliste, palette pastel), mise en place du pipeline 
-org-publish, configuration du déploiement GitHub Pages, et 
-automatisation des fichiers via yasnippet dans Emacs.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-label">Résultats obtenus</div>
-        <p style="font-size:12px;color:var(--text-muted);">Site en ligne
- avec 3 articles publiés : conception du CSS, découverte de LaTeX, et le
- meta-post sur l'infrastructure du blog. Pipeline de publication 
-fonctionnel : écrire en org-mode → <code style="font-size:10px;background:var(--bg);padding:2px 5px;border:1px solid var(--border);">org-publish</code> → push git → déployé en 2–3 minutes.</p>
-      </div>
-
-      <div class="illustration-box" style="border-style: solid; height: 320px; overflow: hidden; padding: 0; margin-bottom: 8px;">
-        <a href="https://blog.evand.dev/" target="_blank" style="display: block; width: 100%; height: 100%;">
-          <img src="portfolio_files/blog.png" alt="Capture d'écran du blog" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-        </a>
-      </div>
-      <div style="font-size: 10px; color: var(--text-dim); text-align: center; font-style: italic; margin-bottom: 16px;">
-        Figure 3 : Page d'accueil du blog
-      </div>
-
-      <hr class="sep">
-
-      <div class="card">
-        <div class="card-label">Compétences développées</div>
-        <div style="margin-bottom:8px;">
-          <div class="project-field-label">Hard skills</div>
-          <div class="tags">
-            <span class="tag hard">Emacs / org-mode avancé</span>
-            <span class="tag hard">CSS from scratch</span>
-            <span class="tag hard">Déploiement GitHub Pages</span>
-            <span class="tag hard">Automatisation (yasnippet, org-publish)</span>
-          </div>
-        </div>
-        <div>
-          <div class="project-field-label" style="margin-top:12px;">Soft skills</div>
-          <div class="tags">
-            <span class="tag soft">Autonomie</span>
-            <span class="tag soft">Documentation &amp; communication écrite</span>
-            <span class="tag soft">Rigueur dans la publication</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-label">Analyse réflexive</div>
-        <div class="reflection">Ce projet illustre une approche où l'outil de travail (Emacs) devient aussi l'outil de publication — une cohérence de workflow rare à ce stade.</div>
-        <p style="margin-top:8px;">Écrire mon propre CSS de zéro m'a forcé à comprendre les détails du design web (comme le modèle de boîte et les variables personnalisées CSS) plutôt que de me reposer sur des thèmes existants ou des frameworks lourds. Cela montre mon attachement à maîtriser l'ensemble de ma chaîne d'outils, du code source au rendu final, afin de minimiser le superflu et de configurer précisément mon environnement.</p>
-        <p style="margin-top:8px;">À l'avenir, j'aimerais automatiser encore plus le déploiement en ajoutant un linter CSS à mon pipeline de publication et en publiant régulièrement des articles de synthèse sur mes expériences avec Linux et Emacs.</p>
-      </div>
-    </section>
-
-    <!-- PROJET 4 -->
-    <section class="section" id="projet-4">
-      <div class="sec-header">
-        <h1>Installation de poste (Gentoo)</h1>
-        <span class="path">~/projets/04</span>
-        <a href="https://github.com/evan-chapignon/suckless" target="_blank" title="Voir sur GitHub" style="margin-left: auto; display: flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; font-size: 11px;">
-          <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" style="display: inline-block; vertical-align: middle;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          <span>GitHub</span>
-        </a>
-      </div>
-      <div class="project-grid">
-        <div><div class="project-field-label">Cadre</div><div class="project-field-value">Projet personnel &amp; SAÉ</div></div>
-        <div><div class="project-field-label">Mode de travail</div><div class="project-field-value">Individuel</div></div>
-        <div><div class="project-field-label">Période</div><div class="project-field-value">Depuis Septembre 2024</div></div>
-        <div><div class="project-field-label">Technologies</div><div class="tags">
-          <span class="tag hard">Gentoo Linux</span>
-          <span class="tag hard">OpenRC</span>
-          <span class="tag hard">SystemD</span>
-          <span class="tag">Linux</span>
-          <span class="tag">Suckless</span>
-        </div></div>
-      </div>
-      <div class="card">
-        <div class="card-label">Contexte &amp; objectifs</div>
-        <p style="font-size:12px;color:var(--text-muted);">Maîtrise de 
-l'installation et de la configuration de systèmes Linux, depuis les 
-distributions grand public jusqu'à Gentoo — une distribution 
-source-based qui demande de compiler l'intégralité du système. Ce projet
- reflète une compréhension approfondie des mécanismes internes d'un OS.</p>
-      </div>
-      <div class="card">
-        <div class="card-label">Votre rôle personnel</div>
-        <p style="font-size:12px;color:var(--text-muted);">Installation 
-complète de Gentoo en environnement personnel : partitionnement, 
-compilation du noyau, configuration d'OpenRC, sélection des USE flags, 
-mise en place d'un environnement graphique minimal (outils Suckless).</p>
-      </div>
-      <div class="card">
-        <div class="card-label">Résultats obtenus</div>
-        <p>Un système Gentoo fonctionnel et ultra-léger que j'utilise au quotidien comme environnement de travail principal. Cette installation m'a permis de maîtriser la compilation personnalisée du noyau Linux (optimisée pour mon matériel spécifique) et la gestion granulaire des dépendances via les USE flags de Portage, réduisant la consommation de mémoire RAM au démarrage à moins de 150 Mo.</p>
-      </div>
-      <div class="illustration-box" style="border-style: solid; height: auto; min-height: 120px; overflow: hidden; padding: 0; margin-bottom: 8px;">
-        <a href="https://github.com/evan-chapignon/suckless" target="_blank" style="display: block; width: 100%;">
-          <img src="portfolio_files/gentoo.png" alt="Capture d'écran Gentoo" style="width: 100%; height: auto; display: block;" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:100%;height:120px;display:flex;align-items:center;justify-content:center;color:var(--text-dim);font-size:11px;font-style:italic;\'>gentoo.png (manquant)</div>'">
-        </a>
-      </div>
-      <div style="font-size: 10px; color: var(--text-dim); text-align: center; font-style: italic; margin-bottom: 16px;">
-        Figure 4 : Aperçu des informations système sous Gentoo avec fastfetch
-      </div>
-      <hr class="sep">
-      <div class="card">
-        <div class="card-label">Compétences développées</div>
-        <div style="margin-bottom:8px;">
-          <div class="project-field-label">Hard skills</div>
-          <div class="tags">
-            <span class="tag hard">Administration système Linux</span>
-            <span class="tag hard">Compilation noyau</span>
-            <span class="tag hard">OpenRC / SystemD</span>
-            <span class="tag hard">Gestion de paquets source</span>
-          </div>
-        </div>
-        <div>
-          <div class="project-field-label" style="margin-top:12px;">Soft skills</div>
-          <div class="tags">
-            <span class="tag soft">Autonomie</span>
-            <span class="tag soft">Résolution de problèmes</span>
-            <span class="tag soft">Persévérance</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-label">Analyse réflexive</div>
-        <p>L'installation de Gentoo a démystifié le fonctionnement interne du système d'exploitation. Contrairement aux distributions comme Debian ou Ubuntu où tout est préconfiguré, Gentoo force à comprendre chaque étape de l'initialisation du système : du partitionnement manuel avec GPT au chargeur de démarrage GRUB, en passant par la configuration d'OpenRC et l'écriture de scripts d'initialisation personnalisés. Cela a grandement renforcé mon autonomie face aux pannes système et ma capacité à lire les logs de démarrage pour diagnostiquer les erreurs de pilotes.</p>
-      </div>
-    </section>
-
-    <!-- PROJET 5 -->
-    <section class="section" id="projet-5">
-      <div class="sec-header">
         <h1>Script de déploiement Dolibarr</h1>
-        <span class="path">~/projets/05</span>
+        <span class="path">~/projets/03</span>
         <a href="https://github.com/evan-chapignon/Dolibarr-Script" target="_blank" title="Voir sur GitHub" style="margin-left: auto; display: flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; font-size: 11px;">
           <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" style="display: inline-block; vertical-align: middle;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
           <span>GitHub</span>
@@ -670,7 +510,7 @@ mise en place d'un environnement graphique minimal (outils Suckless).</p>
         </a>
       </div>
       <div style="font-size: 10px; color: var(--text-dim); text-align: center; font-style: italic; margin-bottom: 16px;">
-        Figure 5 : Instance fonctionnelle de Dolibarr
+        Figure 3 : Instance fonctionnelle de Dolibarr
       </div>
 
       <hr class="sep">
@@ -702,6 +542,166 @@ mise en place d'un environnement graphique minimal (outils Suckless).</p>
         <div class="reflection">Ce projet a renforcé mon intérêt pour l'administration système et l'automatisation. Il m'a montré comment coordonner plusieurs services réseau isolés pour créer une solution multi-tenant simple et propre.</div>
         <p style="margin-top:8px;">La principale difficulté a été de fiabiliser les scripts de sauvegarde pour éviter les pertes de données. C'est en écrivant des vérifications rigoureuses de codes de retour (exit status) dans `BACKUP.SH` que j'ai pu stabiliser le processus.</p>
         <p style="margin-top:8px;">Si c'était à refaire, j'utiliserais un orchestrateur plus avancé (comme Docker Compose en mode Swarm ou Kubernetes léger) pour faciliter la gestion de la haute disponibilité et de l'auto-scaling des instances clients.</p>
+      </div>
+    </section>
+
+    <!-- PROJET 4 -->
+    <section class="section" id="projet-4">
+      <div class="sec-header">
+        <h1>Blog technique</h1>
+        <span class="path">~/projets/04</span>
+      </div>
+      <div class="project-grid">
+        <div><div class="project-field-label">Cadre</div><div class="project-field-value">Projet personnel</div></div>
+        <div><div class="project-field-label">Mode de travail</div><div class="project-field-value">Individuel</div></div>
+        <div><div class="project-field-label">Période</div><div class="project-field-value">Avril 2026 – en cours</div></div>
+        <div><div class="project-field-label">Technologies</div><div class="tags">
+          <span class="tag hard">Emacs / org-mode</span>
+          <span class="tag hard">org-publish</span>
+          <span class="tag hard">HTML / CSS</span>
+          <span class="tag">GitHub Pages</span>
+          <span class="tag">yasnippet</span>
+        </div></div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Contexte &amp; objectifs</div>
+        <p style="font-size:12px;color:var(--text-muted);">Blog technique personnel accessible sur <a href="https://blog.evand.dev/" style="color:var(--accent);">blog.evand.dev</a>,
+ créé pour documenter des projets et partager un workflow. Rédigé 
+entièrement en org-mode depuis Emacs, converti automatiquement en HTML 
+via <code style="font-size:10px;background:var(--bg);padding:2px 5px;border:1px solid var(--border);">org-publish</code>, et déployé sur GitHub Pages sous nom de domaine personnel.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Votre rôle personnel</div>
+        <p style="font-size:12px;color:var(--text-muted);">Conception et
+ développement intégral : écriture du CSS from scratch (typographie, 
+thème clair minimaliste, palette pastel), mise en place du pipeline 
+org-publish, configuration du déploiement GitHub Pages, et 
+automatisation des fichiers via yasnippet dans Emacs.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Résultats obtenus</div>
+        <p style="font-size:12px;color:var(--text-muted);">Site en ligne
+ avec 3 articles publiés : conception du CSS, découverte de LaTeX, et le
+ meta-post sur l'infrastructure du blog. Pipeline de publication 
+fonctionnel : écrire en org-mode → <code style="font-size:10px;background:var(--bg);padding:2px 5px;border:1px solid var(--border);">org-publish</code> → push git → déployé en 2–3 minutes.</p>
+      </div>
+
+      <div class="illustration-box" style="border-style: solid; height: 320px; overflow: hidden; padding: 0; margin-bottom: 8px;">
+        <a href="https://blog.evand.dev/" target="_blank" style="display: block; width: 100%; height: 100%;">
+          <img src="portfolio_files/blog.png" alt="Capture d'écran du blog" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+        </a>
+      </div>
+      <div style="font-size: 10px; color: var(--text-dim); text-align: center; font-style: italic; margin-bottom: 16px;">
+        Figure 4 : Page d'accueil du blog
+      </div>
+
+      <hr class="sep">
+
+      <div class="card">
+        <div class="card-label">Compétences développées</div>
+        <div style="margin-bottom:8px;">
+          <div class="project-field-label">Hard skills</div>
+          <div class="tags">
+            <span class="tag hard">Emacs / org-mode avancé</span>
+            <span class="tag hard">CSS from scratch</span>
+            <span class="tag hard">Déploiement GitHub Pages</span>
+            <span class="tag hard">Automatisation (yasnippet, org-publish)</span>
+          </div>
+        </div>
+        <div>
+          <div class="project-field-label" style="margin-top:12px;">Soft skills</div>
+          <div class="tags">
+            <span class="tag soft">Autonomie</span>
+            <span class="tag soft">Documentation &amp; communication écrite</span>
+            <span class="tag soft">Rigueur dans la publication</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Analyse réflexive</div>
+        <div class="reflection">Ce projet illustre une approche où l'outil de travail (Emacs) devient aussi l'outil de publication — une cohérence de workflow rare à ce stade.</div>
+        <p style="margin-top:8px;">Écrire mon propre CSS de zéro m'a forcé à comprendre les détails du design web (comme le modèle de boîte et les variables personnalisées CSS) plutôt que de me reposer sur des thèmes existants ou des frameworks lourds. Cela montre mon attachement à maîtriser l'ensemble de ma chaîne d'outils, du code source au rendu final, afin de minimiser le superflu et de configurer précisément mon environnement.</p>
+        <p style="margin-top:8px;">À l'avenir, j'aimerais automatiser encore plus le déploiement en ajoutant un linter CSS à mon pipeline de publication et en publiant régulièrement des articles de synthèse sur mes expériences avec Linux et Emacs.</p>
+      </div>
+    </section>
+
+    <!-- PROJET 5 -->
+    <section class="section" id="projet-5">
+      <div class="sec-header">
+        <h1>Installation de poste (Gentoo)</h1>
+        <span class="path">~/projets/05</span>
+        <a href="https://github.com/evan-chapignon/suckless" target="_blank" title="Voir sur GitHub" style="margin-left: auto; display: flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; font-size: 11px;">
+          <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" style="display: inline-block; vertical-align: middle;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+      <div class="project-grid">
+        <div><div class="project-field-label">Cadre</div><div class="project-field-value">Projet personnel &amp; SAÉ</div></div>
+        <div><div class="project-field-label">Mode de travail</div><div class="project-field-value">Individuel</div></div>
+        <div><div class="project-field-label">Période</div><div class="project-field-value">Depuis Septembre 2024</div></div>
+        <div><div class="project-field-label">Technologies</div><div class="tags">
+          <span class="tag hard">Gentoo Linux</span>
+          <span class="tag hard">OpenRC</span>
+          <span class="tag hard">SystemD</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Suckless</span>
+        </div></div>
+      </div>
+      <div class="card">
+        <div class="card-label">Contexte &amp; objectifs</div>
+        <p style="font-size:12px;color:var(--text-muted);">Maîtrise de 
+l'installation et de la configuration de systèmes Linux, depuis les 
+distributions grand public jusqu'à Gentoo — une distribution 
+source-based qui demande de compiler l'intégralité du système. Ce projet
+ reflète une compréhension approfondie des mécanismes internes d'un OS.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Votre rôle personnel</div>
+        <p style="font-size:12px;color:var(--text-muted);">Installation 
+complète de Gentoo en environnement personnel : partitionnement, 
+compilation du noyau, configuration d'OpenRC, sélection des USE flags, 
+mise en place d'un environnement graphique minimal (outils Suckless).</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Résultats obtenus</div>
+        <p>Un système Gentoo fonctionnel et ultra-léger que j'utilise au quotidien comme environnement de travail principal. Cette installation m'a permis de maîtriser la compilation personnalisée du noyau Linux (optimisée pour mon matériel spécifique) et la gestion granulaire des dépendances via les USE flags de Portage, réduisant la consommation de mémoire RAM au démarrage à moins de 150 Mo.</p>
+      </div>
+      <div class="illustration-box" style="border-style: solid; height: auto; min-height: 120px; overflow: hidden; padding: 0; margin-bottom: 8px;">
+        <a href="https://github.com/evan-chapignon/suckless" target="_blank" style="display: block; width: 100%;">
+          <img src="portfolio_files/gentoo.png" alt="Capture d'écran Gentoo" style="width: 100%; height: auto; display: block;" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:100%;height:120px;display:flex;align-items:center;justify-content:center;color:var(--text-dim);font-size:11px;font-style:italic;\'>gentoo.png (manquant)</div>'">
+        </a>
+      </div>
+      <div style="font-size: 10px; color: var(--text-dim); text-align: center; font-style: italic; margin-bottom: 16px;">
+        Figure 5 : Aperçu des informations système sous Gentoo avec fastfetch
+      </div>
+      <hr class="sep">
+      <div class="card">
+        <div class="card-label">Compétences développées</div>
+        <div style="margin-bottom:8px;">
+          <div class="project-field-label">Hard skills</div>
+          <div class="tags">
+            <span class="tag hard">Administration système Linux</span>
+            <span class="tag hard">Compilation noyau</span>
+            <span class="tag hard">OpenRC / SystemD</span>
+            <span class="tag hard">Gestion de paquets source</span>
+          </div>
+        </div>
+        <div>
+          <div class="project-field-label" style="margin-top:12px;">Soft skills</div>
+          <div class="tags">
+            <span class="tag soft">Autonomie</span>
+            <span class="tag soft">Résolution de problèmes</span>
+            <span class="tag soft">Persévérance</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">Analyse réflexive</div>
+        <p>L'installation de Gentoo a démystifié le fonctionnement interne du système d'exploitation. Contrairement aux distributions comme Debian ou Ubuntu où tout est préconfiguré, Gentoo force à comprendre chaque étape de l'initialisation du système : du partitionnement manuel avec GPT au chargeur de démarrage GRUB, en passant par la configuration d'OpenRC et l'écriture de scripts d'initialisation personnalisés. Cela a grandement renforcé mon autonomie face aux pannes système et ma capacité à lire les logs de démarrage pour diagnostiquer les erreurs de pilotes.</p>
       </div>
     </section>
 
