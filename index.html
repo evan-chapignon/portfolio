@@ -338,7 +338,7 @@ gestionnaire de fenêtres au pipeline de publication.</p>
 
       <div class="card">
         <div class="card-label">Votre rôle personnel</div>
-        <p>J'ai été responsable de l'intégration et de la création des ressources graphiques du jeu (création des textures de portes et de l'interface visuelle). J'ai également travaillé sur la gestion des événements de contrôles clavier (débogage du système de flèches directionnelles sous JavaFX pour l'étape 1) ainsi que sur la rédaction de l'auto-évaluation et des rapports de conformité SOLID.</p>
+        <p>J'ai développé la logique de gestion des événements utilisateur en programmant des écouteurs de clavier (Event Handlers sous JavaFX) pour corriger les bugs de déplacement directionnel de la caméra et du joueur sur la première étape du labyrinthe. J'ai également codé le module de liaison des assets graphiques (chargement et rendu dynamique des textures des portes et éléments interactifs) et mené un audit de refactorisation basé sur les principes SOLID.</p>
       </div>
 
       <div class="card">
@@ -376,9 +376,9 @@ gestionnaire de fenêtres au pipeline de publication.</p>
 
       <div class="card">
         <div class="card-label">Analyse réflexive</div>
-        <div class="reflection">Ce projet m'a appris à intégrer proprement des ressources visuelles et à gérer les architectures événementielles (comme les listeners de clavier sous JavaFX) dans un projet de groupe.</div>
-        <p style="margin-top:8px;">La principale difficulté résidait dans le débogage de comportements inattendus sur les contrôles utilisateurs (comme les mouvements du joueur sur certaines étapes). Cela a nécessité une analyse approfondie de la chaîne de propagation des événements JavaFX.</p>
-        <p style="margin-top:8px;">Si c'était à refaire, je définirais des conventions d'intégration plus strictes dès le départ (notamment pour les fichiers JSON de sauvegarde et les ressources graphiques) afin d'éviter les conflits de version complexes lors des merges Git.</p>
+        <div class="reflection">Ce projet m'a confronté au développement d'architectures orientées événements et à l'application concrète des concepts SOLID sur du code Java de taille moyenne.</div>
+        <p style="margin-top:8px;">La principale difficulté résidait dans l'isolation du cycle des événements clavier de la vue (notamment la consommation de l'événement avec consume() pour éviter la propagation parasite). Cela m'a poussé à approfondir la documentation des Event Filters et Handlers de JavaFX.</p>
+        <p style="margin-top:8px;">Si c'était à refaire, je structurerais un parseur de fichiers de sauvegarde JSON plus tolérant aux changements dès le départ, ce qui aurait évité d'importants conflits de version sur Save.json lors des phases d'intégration continue.</p>
       </div>
     </section>
 
