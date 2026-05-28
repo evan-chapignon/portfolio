@@ -56,6 +56,9 @@
     <a class="nav-item" onclick="show('projet-4')">
       <span class="icon">·</span> Installation de poste
     </a>
+    <a class="nav-item" onclick="show('projet-5')">
+      <span class="icon">·</span> Script Dolibarr
+    </a>
 
     <div class="sidebar-label">Bilan</div>
 
@@ -268,6 +271,29 @@ gestionnaire de fenêtres au pipeline de publication.</p>
             </div>
             <div class="tags">
               <span class="tag hard">[Tech]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 5 -->
+      <div class="project-card" id="list-p5" onclick="show('projet-5')">
+        <div class="project-header">
+          <div class="project-index">05</div>
+          <div class="project-title-block">
+            <div class="project-title">Script de déploiement Dolibarr</div>
+            <div class="meta">
+              <span>S3</span>
+              <span>·</span>
+              <span>SAÉ 3.03 (Système)</span>
+              <span>·</span>
+              <span>Groupe de 3 personnes</span>
+            </div>
+            <div class="tags">
+              <span class="tag hard">Shell / Bash</span>
+              <span class="tag hard">Podman</span>
+              <span class="tag hard">Traefik</span>
+              <span class="tag">PostgreSQL</span>
             </div>
           </div>
         </div>
@@ -567,7 +593,87 @@ distributions ? Qu'avez-vous compris sur Linux que vous ne saviez pas
 avant ?</div></div>
     </section>
 
+    <!-- PROJET 5 -->
+    <section class="section" id="projet-5">
+      <div class="sec-header">
+        <h1>Script de déploiement Dolibarr</h1>
+        <span class="path">~/projets/05</span>
+      </div>
 
+      <div class="project-grid">
+        <div>
+          <div class="project-field-label">Cadre</div>
+          <div class="project-field-value">SAÉ 3.03 · Semestre 3</div>
+        </div>
+        <div>
+          <div class="project-field-label">Mode de travail</div>
+          <div class="project-field-value">Groupe de 3 personnes</div>
+        </div>
+        <div>
+          <div class="project-field-label">Période</div>
+          <div class="project-field-value">Mars 2026</div>
+        </div>
+        <div>
+          <div class="project-field-label">Technologies</div>
+          <div class="tags">
+            <span class="tag hard">Shell / Bash</span>
+            <span class="tag hard">Podman</span>
+            <span class="tag hard">Traefik</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Contexte &amp; objectifs</div>
+        <p style="font-size:12px;color:var(--text-muted);">Automatisation du déploiement d'une infrastructure Dolibarr multi-clients sous Debian. L'objectif était de concevoir un script d'installation (`INSTALL.SH`) interactif permettant d'initialiser l'infrastructure (bases de données PostgreSQL séparées, reverse proxy Traefik gérant le HTTPS auto-signé, conteneurs Dolibarr sous Podman) et de gérer les clients (création, sauvegardes planifiées, suppression).</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Votre rôle personnel</div>
+        <p>Dans ce projet, je me suis principalement chargé de l'écriture et de la réalisation du script de sauvegarde (`BACKUP.SH`), gérant les dumps PostgreSQL et leur transfert sécurisé vers la VM de stockage. J'ai également implémenté la possibilité de choisir dynamiquement la version de Dolibarr à installer dans `DOLIBARR.SH` et géré les fusions de branches sur Git.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Résultats obtenus</div>
+        <p>Une solution clé en main d'administration système : initialisation complète en une seule commande, routage dynamique par Traefik (`client.dattier.iutinfo.fr`), isolation des bases de données par client et sauvegardes quotidiennes automatisées via cron + rsync.</p>
+      </div>
+
+      <div class="illustration-box">
+        [ Architecture réseau Dolibarr · <a href="https://github.com/evan-chapignon/Dolibarr-Script" style="color:var(--accent);">github.com/evan-chapignon/Dolibarr-Script</a> ]
+      </div>
+
+      <hr class="sep">
+
+      <div class="card">
+        <div class="card-label">Compétences développées</div>
+        <div style="margin-bottom: 8px;">
+          <div class="project-field-label">Hard skills</div>
+          <div class="tags">
+            <span class="tag hard">Scripting Shell (Bash)</span>
+            <span class="tag hard">Virtualisation légère (Podman)</span>
+            <span class="tag hard">Reverse Proxy (Traefik)</span>
+            <span class="tag hard">Administration PostgreSQL</span>
+            <span class="tag">Sauvegardes (rsync, cron)</span>
+          </div>
+        </div>
+        <div>
+          <div class="project-field-label" style="margin-top:12px;">Soft skills</div>
+          <div class="tags">
+            <span class="tag soft">Collaboration (résolution de conflits Git, Git branching)</span>
+            <span class="tag soft">Rigueur (gestion de la sécurité des identifiants DB)</span>
+            <span class="tag soft">Résolution de problèmes (débogage de scripts de dump asynchrones)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Analyse réflexive</div>
+        <div class="reflection">Ce projet a renforcé mon intérêt pour l'administration système et l'automatisation. Il m'a montré comment coordonner plusieurs services réseau isolés pour créer une solution multi-tenant simple et propre.</div>
+        <p style="margin-top:8px;">La principale difficulté a été de fiabiliser les scripts de sauvegarde pour éviter les pertes de données. C'est en écrivant des vérifications rigoureuses de codes de retour (exit status) dans `BACKUP.SH` que j'ai pu stabiliser le processus.</p>
+        <p style="margin-top:8px;">Si c'était à refaire, j'utiliserais un orchestrateur plus avancé (comme Docker Compose en mode Swarm ou Kubernetes léger) pour faciliter la gestion de la haute disponibilité et de l'auto-scaling des instances clients.</p>
+      </div>
+    </section>
 
     <!-- RÉFLEXION GLOBALE -->
     <section class="section" id="reflexion">
